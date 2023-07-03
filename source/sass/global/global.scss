@@ -1,5 +1,5 @@
 /* здесь используйте глобальные селекторы img, body, html и так далее*/
-.page-body {
+body {
     background-color: #ffffff;
     color: $black-color;
     font-family: $font-family;
@@ -9,4 +9,9 @@
     flex-direction: column;
     margin: 0 auto;
     box-sizing: border-box;
+
+    a {
+      text-decoration: none;
+      color: $black-color;
+    }
   }

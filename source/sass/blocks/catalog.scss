@@ -1,3 +1,36 @@
 .catalog {
-    background-color: $lightest-grey-color;
+  background-color: $lightest-grey-color;
+}
+
+.catalog__block-title {
+  padding-bottom: 20px;
+  margin: 0 auto;
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 40px;
+    margin: 0;
+  }
+}
+
+.catalog__desktop-container {
+  margin: 0 auto;
+    @media (min-width: $desktop-width) {
+    width: 1440px;
+    padding: 100px 40px 120px;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.catalog__headline-container {
+  padding-top: 50px;
+  margin: 0 auto;
+
+    @media(min-width: $tablet-width) {
+    padding-top: 80px;
+  }
+    @media (min-width: $desktop-width) {
+    padding-top: 0;
+  }
 }
