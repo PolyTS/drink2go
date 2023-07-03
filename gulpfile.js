@@ -15,6 +15,8 @@ import { deleteAsync } from 'del';
 import browser from 'browser-sync';
 import bemlinter from 'gulp-html-bemlinter';
 import { htmlValidator } from "gulp-w3c-html-validator";
+import cheerio from 'gulp-cheerio';
+
 
 const sass = gulpSass(dartSass);
 let isDevelopment = true;
@@ -79,7 +81,7 @@ export function createStack () {
   return gulp.src('source/img/icons/**/*.svg')
     .pipe(svgo())
     .pipe(stacksvg())
-    .pipe(gulp.dest('build/img/icons'));
+    .pipe(gulp.dest('build/img/icons'))
 }
 
 export function copyAssets () {
@@ -150,12 +152,14 @@ export function runDev (done) {
   )(done);
 }
 
-const sprite = () => {
-  return gulp.src('source/img/icons/*.svg')
-  .pipe(svgo())
-  .pipe(svgstore({
-  inlineSvg: true
-  }))
-  .pipe(rename('sprite.svg'))
-  .pipe(gulp.dest('build/img'));
-  }
+// .pipe(cheerio({
+//   run: function($) {
+//     $('path[fill]').each(function() {
+//       let fillColor = $(this).attr('fill');
+//       if (fillColor && fillColor.startsWith('#')) {
+//         $(this).attr('fill', 'none');
+//       }
+//     });
+//   },
+//   parserOptions: { xmlMode: true }
+// }))

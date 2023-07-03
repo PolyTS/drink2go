@@ -191,3 +191,17 @@
   justify-content: center;
   width: 206px;
 }
+
+#social_htmlacademy-logo {
+    fill: $grey-color;
+
+  &:hover,
+  &:focus{
+    fill: $primary-color;
+  }
+  };
+
+
+.svg-icon-htmlacademy-logo path{
+  fill: black;
+}

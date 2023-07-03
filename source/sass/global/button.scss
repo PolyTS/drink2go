@@ -11,21 +11,7 @@
   line-height: 24px;
   color: $white-color;
   position: relative;
-
-
-
-  &:hover,
-  &:focus {
-    background-color: $primary-lighter-color;
-  }
-
-  &:active {
-    background-color: $primary-darker-color;
-  }
-
-  &:disabled {
-    background-color: $grey-color;
-  }
+  cursor: pointer;
 
   &--submit {
     left: 3px;
@@ -38,6 +24,13 @@
   &--reset {
     background-color: $white-color;
     color: $primary-color;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &:disabled {
+      color: $white-color;
+    }
 
     @media (min-width:$desktop-width) {
       padding: 7px 27px;
@@ -60,5 +53,20 @@
       z-index: 6;
       left: 20px;
     }
+  }
+
+
+  // Состояния
+  &:hover,
+  &:focus {
+    background-color: $primary-lighter-color;
+  }
+
+  &:active {
+    background-color: $primary-darker-color;
+  }
+
+  &:disabled {
+    background-color: $grey-color;
   }
 }

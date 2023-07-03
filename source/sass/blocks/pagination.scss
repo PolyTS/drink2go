@@ -37,6 +37,7 @@
   background-color: $white-color;
   border-radius: 4px;
   font-family: $font-family;
+  cursor: pointer;
 
   &--next{
     @media (min-width: $tablet-width){
@@ -48,6 +49,7 @@
     width: 91px;
     padding: 15px 20px;
   }
+
   svg{
     @media (min-width: $tablet-width){
       display: none;
@@ -65,6 +67,42 @@
     }
   }
 
+  &:hover,
+  &:focus {
+    background-color: $primary-color;
+
+    span{
+      color: $white-color;
+    }
+
+    svg path{
+      fill: $white-color;
+    }
+  }
+
+  &:active {
+    background-color: $primary-darker-color;
+
+    span{
+      color: $white-color;
+    }
+
+    svg path{
+      fill: $white-color;
+    }
+  }
+
+  &:disabled {
+    background-color: $light-grey-color;
+
+    span{
+      color: $white-color;
+    }
+
+    svg path{
+      fill: $white-color;
+    }
+  }
 }
 
 .pagination__link{
@@ -82,18 +120,39 @@
   background-color: $white-color;
   margin-right: 20px;
   border-radius: 4px;
+  cursor: pointer;
 
   &:last-child {
     margin-right: 0px;
   }
 
-  &--current{
+  &--current {
     background-color: transparent;
     font-weight: 600;
 
-    a{
+    a {
       color: $black-color;
     }
+  }
+  &:hover,
+  &:focus,
+  &:active,
+  &:disabled {
+    a {
+      color: $white-color;
+    }
+  }
 
+  &:hover,
+  &:focus {
+    background-color: $primary-color;
+  }
+
+  &:active {
+    background-color: $primary-darker-color;
+  }
+
+  &:disabled {
+    background-color: $light-grey-color;
   }
 }

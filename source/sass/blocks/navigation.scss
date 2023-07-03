@@ -294,12 +294,24 @@
   &::after {
     content: url(../../img/icons/header/Navigation/Vector.svg);
     position: absolute;
-    top: 25px;
-    left: 25px;
+    top: 22px;
+    left: 22px;
     width: 16px;
   }
 }
 
-.navigation--nojs .navigation__toggle::before {
+.navigation--nojs .navigation__toggle{
   display: none;
+}
+
+.navigation--nojs {
+  @media(min-width: $mobile-width-only) and (max-width: $mobile-width-only){
+    &::after {
+      content: url(../../img/icons/header/Navigation/Vector.svg);
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 16px;
+  }
+  }
 }
