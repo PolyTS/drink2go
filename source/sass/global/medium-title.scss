@@ -1,21 +1,21 @@
-.medium-title{
-    text-align: center;
-    font-size: 24px;
+.medium-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 36px;
+  margin: 0;
+  padding-top: 4px;
+  width: 280px;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    width: 728px;
+    font-size: 42px;
     font-weight: 700;
-    line-height: 36px;
-    margin: 0;
-    padding-top: 4px;
-    width: 280px;
-    box-sizing: border-box;
+    line-height: 64px;
+  }
 
-    @media (min-width: $tablet-width){
-        width: 728px;
-        font-size: 42px;
-        font-weight: 700;
-        line-height: 64px;
-    }
-
-    @media (min-width: $desktop-width){
-        width: 1360px;
-    }
+  @media (min-width: $desktop-width) {
+    width: 1360px;
+  }
 }

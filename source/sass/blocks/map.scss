@@ -1,13 +1,13 @@
-//вопрос могу ли так ограничить скролл?
 .map__container {
   width: 100%;
   height: 420px;
   overflow: hidden;
 
-    @media (min-width: $tablet-width){
-      height: 480px;
+  @media (min-width: $tablet-width) {
+    height: 480px;
   }
-  @media (min-width: $desktop-width){
+
+  @media (min-width: $desktop-width) {
     height: 540px;
   }
 }

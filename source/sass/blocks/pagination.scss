@@ -1,9 +1,9 @@
 .pagination {
-  @media (min-width: $tablet-width){
+  @media (min-width: $tablet-width) {
     display: flex;
     justify-content: flex-end;
   }
-  @media (min-width: $desktop-width){
+  @media (min-width: $desktop-width) {
     width: 1011px;
   }
 }
@@ -13,12 +13,12 @@
   display: flex;
   justify-content: space-between;
 
-  @media (min-width: $tablet-width){
+  @media (min-width: $tablet-width) {
     width: 395px;
   }
 }
 
-.pagination__list{
+.pagination__list {
   list-style-type: none;
   display: flex;
   padding: 0;
@@ -39,25 +39,26 @@
   font-family: $font-family;
   cursor: pointer;
 
-  &--next{
-    @media (min-width: $tablet-width){
+  &--next {
+    @media (min-width: $tablet-width) {
       margin-left: 7px;
       margin-right: 7px;
     }
   }
-  @media (min-width: $tablet-width){
+
+  @media (min-width: $tablet-width) {
     width: 91px;
     padding: 15px 20px;
   }
 
-  svg{
-    @media (min-width: $tablet-width){
+  svg {
+    @media (min-width: $tablet-width) {
       display: none;
     }
   }
   span {
     display: none;
-    @media (min-width: $tablet-width){
+    @media (min-width: $tablet-width) {
       display: block;
       text-align: center;
       font-size: 16px;
@@ -71,11 +72,11 @@
   &:focus {
     background-color: $primary-color;
 
-    span{
+    span {
       color: $white-color;
     }
 
-    svg path{
+    svg path {
       fill: $white-color;
     }
   }
@@ -83,11 +84,11 @@
   &:active {
     background-color: $primary-darker-color;
 
-    span{
+    span {
       color: $white-color;
     }
 
-    svg path{
+    svg path {
       fill: $white-color;
     }
   }
@@ -105,7 +106,7 @@
   }
 }
 
-.pagination__link{
+.pagination__link {
   text-decoration: none;
   color: $primary-color;
   line-height: 24px;
@@ -123,7 +124,7 @@
   cursor: pointer;
 
   &:last-child {
-    margin-right: 0px;
+    margin-right: 0;
   }
 
   &--current {
@@ -134,10 +135,12 @@
       color: $black-color;
     }
   }
+
   &:hover,
   &:focus,
   &:active,
   &:disabled {
+
     a {
       color: $white-color;
     }

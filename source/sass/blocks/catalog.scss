@@ -14,7 +14,8 @@
 
 .catalog__desktop-container {
   margin: 0 auto;
-    @media (min-width: $desktop-width) {
+
+  @media (min-width: $desktop-width) {
     width: 1440px;
     padding: 100px 40px 120px;
     box-sizing: border-box;
@@ -27,10 +28,11 @@
   padding-top: 50px;
   margin: 0 auto;
 
-    @media(min-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
     padding-top: 80px;
   }
-    @media (min-width: $desktop-width) {
+
+  @media (min-width: $desktop-width) {
     padding-top: 0;
   }
 }
