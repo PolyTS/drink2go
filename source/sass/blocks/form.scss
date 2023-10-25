@@ -1,0 +1,513 @@
+.form {
+  width: 320px;
+  box-sizing: border-box;
+  padding: 0 20px 40px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: 768px;
+    padding: 0 18px 44px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+    margin: 0;
+    width: 318px;
+  }
+}
+
+.form__price-container {
+  width: 280px;
+  margin: 0 auto;
+  padding: 0;
+  padding-bottom: 30px;
+
+  @media (min-width: $tablet-width) {
+    width: 223px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    padding-right: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+  }
+}
+
+.form__fields {
+  fieldset {
+    border: none;
+  }
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 728px;
+    justify-content: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: column;
+    width: 318px;
+    justify-content: right;
+  }
+}
+
+.form__range {
+  width: 280px;
+  position: relative;
+  padding-top: 11px;
+
+  @media (min-width: $tablet-width) {
+    width: 223px;
+  }
+}
+
+.form__range-scale {
+  position: absolute;
+  width: 280px;
+  height: 2px;
+  background-color: $light-grey-color;
+
+  @media (min-width: $tablet-width) {
+    width: 223px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 318px;
+  }
+}
+
+.form__range-bar {
+  position: absolute;
+  top: -1px;
+  width: 241px;
+  height: 4px;
+  background-color: $primary-lighter-color;
+
+  @media (min-width: $tablet-width) {
+    width: 192px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 274px;
+  }
+
+  &:disabled {
+    background-color: $grey-color;
+  }
+}
+
+.form__range-bar-toggle {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid $primary-lighter-color;
+  background-color: $grey-range-toggle-color;
+  cursor: pointer;
+  top: -10px;
+  left: 3px;
+
+  &:hover,
+  &:focus {
+    background-color: #ddd5f3;
+  }
+
+  &:active {
+    background-color: $primary-darker-color;
+  }
+
+  &:disabled {
+    border-color: $grey-color;
+    background-color: $light-grey-color;
+  }
+
+  @media (min-width: $desktop-width) {
+    left: 0;
+  }
+
+  &--max {
+    left: 239px;
+
+    @media (min-width: $tablet-width) {
+      left: 181px;
+    }
+    @media (min-width: $desktop-width){
+      left: 274px;
+    }
+  }
+}
+
+.form__legend {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  padding-bottom: 20px;
+
+  &--milk-preference {
+    padding-bottom: 13px;
+  }
+
+  &--country {
+    padding-bottom:10px;
+  }
+}
+
+.form__range-wrapper-inputs {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  padding-top: 34px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 8px;
+    height: 2px;
+    background-color: $grey-color;
+    top: 54px;
+    right: 136px;
+
+    @media (min-width: $tablet-width) {
+      right: 107px;
+    }
+
+    @media (min-width: $desktop-width) {
+      right: 154px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 223px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 318px;
+    padding-bottom: 32px;
+  }
+}
+
+.form__range-input[type=number] {
+  font-family: $font-family;
+  border-radius: 4px;
+  border: 2px solid $primary-lighter-color;
+  background: $white-color;
+  width: 118px;
+  appearance: none;
+  padding: 8px 10px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  box-sizing: border-box;
+
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 89px;
+    padding: 6px 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 134px;
+  }
+
+  &:focus {
+    border-color: $primary-darker-color;
+  }
+}
+
+.form__range-input--min-price {
+  color: $grey-color;
+}
+
+.form__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.form__description {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  padding-left: 10px;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 8px;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-left: 6px;
+  }
+  &--country {
+    padding-left: 13px;
+    @media (min-width: $desktop-width) {
+      padding-left: 10px;
+    }
+  }
+
+}
+
+.form__item {
+  padding-bottom: 14px;
+
+  &:last-child {
+    opacity: 0.3;
+  }
+
+  &--switch-grid {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+  }
+}
+
+.form__milk-preference-container {
+  padding: 0 0 19px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    width: 222px;
+    padding-right: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 0 15px;
+  }
+}
+
+.form__container--country {
+  padding: 0 0 19px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: 223px;
+    margin: 0;
+  }
+}
+
+.form__button-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 20px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    width: 277px;
+    margin-top: 12px;
+  }
+
+
+  @media (min-width: $desktop-width) {
+    justify-content: space-between;
+    width: 318px;
+  }
+}
+
+.form__button {
+  justify-content: center;
+
+  &--submit {
+
+    @media (min-width: $tablet-width) {
+      margin-right: 20px;
+    }
+  }
+}
+
+.form__button--reset {
+  background-color: $white-color;
+}
+
+.form__desktop-container {
+  @media (min-width: $desktop-width) {
+    display: flex;
+  }
+}
+
+
+.form__input {
+  display: none;
+}
+
+.form__mark {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: relative;
+  border: 2px solid $grey-color;
+  background-color: $white-color;
+  top: 7px;
+  left: 3px;
+
+  &--country {
+    width: 42px;
+    height: 24px;
+    border-radius: 24px;
+    padding: 0;
+    background-color:$grey-color;
+  }
+
+  @media (min-width: $desktop-width){
+    left: 0;
+    top: 6px;
+  }
+
+  &:hover,
+  &:focus {
+    border-color: $primary-color;
+
+    &::before{
+      content: "";
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background-color: #ddd5f3;
+      position: absolute;
+      top: 1px;
+      right: 1px;
+    }
+  }
+
+  &:disabled {
+    background-color: transparent;
+    border-color: $light-grey-color;
+  }
+}
+
+.form__control input[type="radio"]:checked + .form__mark {
+  border: 2px solid $primary-color;
+
+  &::before {
+    content: "";
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: $primary-color;
+    position: absolute;
+    top: 1px;
+    right: 1px;
+
+    &:disabled {
+      background-color: $light-grey-color;
+    }
+  }
+
+  &--country {
+    background-color: $primary-color;
+    &::before{
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: $white-color;
+    top: 0;
+    right: 0;
+    }
+  }
+
+  &:disabled {
+    border: $light-grey-color;
+  }
+}
+
+.form__switch {
+  position: relative;
+  display: inline-block;
+  width: 42px;
+  height: 24px;
+  left: 3px;
+  bottom: 1px;
+
+  input{
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  @media (min-width: $desktop-width){
+    left: 0;
+  }
+}
+
+/* Hide default HTML checkbox */
+.form__switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.form__slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $grey-color;
+  -webkit-transition: .4s;
+  transition: .4s;
+  box-sizing: border-box;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 0 0 2px $primary-color;
+    background-color: $primary-opacity-color;
+  }
+
+  &:disabled {
+    background-color: $light-grey-color;
+  }
+}
+
+.form__slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+
+  &:disabled {
+    background-color: $lightest-grey-color;
+  }
+}
+
+input:checked + .form__slider {
+  background-color: $primary-color;
+}
+
+input:focus + .form__slider {
+  box-shadow: 0 0 1px $primary-color;
+}
+
+input:checked + .form__slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(18px);
+}
+
+/* Rounded sliders */
+.form__slider.form__slider-round {
+  border-radius: 34px;
+}
+
+.form__slider.form__slider-round:before {
+  border-radius: 50%;
+}

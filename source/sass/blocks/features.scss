@@ -1,0 +1,186 @@
+.features__container {
+  width: 320px;
+  box-sizing: border-box;
+  padding: 50px 20px 28px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: 768px;
+    padding-top: 60px;
+    padding-bottom: 100px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1440px;
+    padding: 100px 40px 96px 40px;
+  }
+}
+
+.features__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    width: 708px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(auto-fill, 94px);
+    grid-column-gap: 30px;
+    grid-row-gap: 50px;
+    margin-left: 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1360px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(auto-fill, 194px);
+    grid-column-gap: 30px;
+    grid-row-gap: 50px;
+  }
+}
+
+.features__item {
+  padding-top: 66px;
+  padding-bottom: 32px;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    padding-left: 72px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+    padding-top: 76px;
+  }
+
+  &--speed::before {
+    content: url("../../img/icons/feauters/time-icon.svg");
+    position: absolute;
+    top: 0;
+    width: 50px;
+    height: 56px;
+    right: 115px;
+
+    @media (min-width: $tablet-width) {
+      left: 0;
+      top: 4px;
+    }
+
+    @media (min-width: $desktop-width) {
+      left: 123px;
+      top: 0;
+    }
+  }
+
+  &--comfort::before {
+    content: url("../../img/icons/feauters/comfort-icon.svg");
+    position: absolute;
+    top: 0;
+    width: 50px;
+    height: 56px;
+    right: 115px;
+
+    @media (min-width: $tablet-width) {
+      left: 0;
+    }
+
+    @media (min-width: $desktop-width) {
+      left: 123px;
+      top: 0;
+    }
+  }
+
+  &--energy::before {
+    content: url("../../img/icons/feauters/energy-icon.svg");
+    position: absolute;
+    top: 0;
+    width: 50px;
+    height: 56px;
+    right: 115px;
+
+    @media (min-width: $tablet-width) {
+      left: 0;
+    }
+
+    @media (min-width: $desktop-width) {
+      left: 123px;
+      top: 0;
+    }
+  }
+
+  &--eco::before {
+    content: url("../../img/icons/feauters/eco-icon.svg");
+    position: absolute;
+    top: 0;
+    width: 50px;
+    height: 56px;
+    right: 115px;
+
+    @media (min-width: $tablet-width) {
+      left: 0;
+    }
+
+    @media (min-width: $desktop-width) {
+      left: 123px;
+      top: 0;
+    }
+  }
+}
+
+.features__title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 32px;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    text-align: left;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: center;
+    padding-right: 21px;
+  }
+}
+
+.features__block-title {
+  padding-bottom: 36px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 80px;
+  }
+}
+
+.features__description {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  margin: 0;
+  padding-top: 4px;
+
+  @media (min-width: $tablet-width) {
+    text-align: left;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    width: 267px;
+    padding-top: 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: relative;
+    width: 318px;
+    right: 10px;
+    text-align: center;
+  }
+}

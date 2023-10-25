@@ -1,0 +1,17 @@
+/* здесь используйте глобальные селекторы img, body, html и так далее*/
+body {
+  background-color: #ffffff;
+  color: $black-color;
+  font-family: $font-family;
+  font-style: normal;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  box-sizing: border-box;
+
+  a {
+    text-decoration: none;
+    color: $black-color;
+  }
+}
