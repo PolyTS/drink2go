@@ -152,14 +152,3 @@ export function runDev (done) {
   )(done);
 }
 
-// .pipe(cheerio({
-//   run: function($) {
-//     $('path[fill]').each(function() {
-//       let fillColor = $(this).attr('fill');
-//       if (fillColor && fillColor.startsWith('#')) {
-//         $(this).attr('fill', 'none');
-//       }
-//     });
-//   },
-//   parserOptions: { xmlMode: true }
-// }))
