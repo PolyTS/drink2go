@@ -2,6 +2,7 @@
   "name": "htmlacademy-gulp-template",
   "version": "1.0.0",
   "private": true,
+  "homepage": "https://polyts.github.io/drink2go/",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.0.0",
     "autoprefixer": "10.4.13",
@@ -28,6 +29,8 @@
     "stylelint-config-htmlacademy": "1.1.2"
   },
   "scripts": {
+    "deploy": "gh-pages -d build",
+    "predeploy": "npm run build",
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint \"source/sass/**/*.scss\" --custom-syntax postcss-scss",
     "w3c": "gulp validateMarkup --silent",
@@ -56,6 +59,7 @@
   },
   "type": "module",
   "dependencies": {
+    "gh-pages": "^6.0.0",
     "swiper": "^9.4.1"
   }
 }
